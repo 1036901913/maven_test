@@ -23,6 +23,7 @@ public class MyInfoController {
     @RequestMapping("/insert_info")
     public Map<String, Object> insertInfo(MyInfo info) {
         int result = infoService.insertInfo(info);
+        System.out.println(result);
         Map<String, Object> map = new HashMap<>();
         if (result != -1) {
             map.put("code", "200");
